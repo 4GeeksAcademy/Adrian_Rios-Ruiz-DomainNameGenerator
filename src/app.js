@@ -6,22 +6,19 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  let part1 = ["the", "our", "this", "them"];
-  let part2 = ["great", "big", "beautiful", "amazing"];
-  let part3 = ["jogger", "racoon", "bikkers", "sniper"];
-  let part4 = [".com", ".is", ".our", ".our"];
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let end = [".com", ".is"];
 
-  function randomIndex(array) {
-    const randomIndex = Math.floor(Math.random() * array.length);
-    return array[randomIndex];
+  for (let i = 0; i < pronoun.length; i++) {
+    for (let x = 0; x < adj.length; x++) {
+      for (let y = 0; y < noun.length; y++) {
+        for (let z = 0; z < end.length; z++) {
+          let domain = pronoun[i] + adj[x] + noun[y] + end[z];
+          console.log(domain);
+        }
+      }
+    }
   }
-  let domain =
-    randomIndex(part1) +
-    randomIndex(part2) +
-    randomIndex(part3) +
-    randomIndex(part4);
-
-  document.querySelector("#domainText").innerHTML = domain;
-  console.log(domain);
 };
